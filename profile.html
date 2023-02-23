@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="profile.css" />
+    <title>RevoU Mini Software Engineering Class</title>
+
+</head>
+
+<body>
+    <header class="header-wrapper">
+        <img class="logo" alt="revou-logo" src="./revou-logo.svg" />
+        <div class="menu">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button>Our Profile</button>
+            <button>Portofolio</button>
+            <button>Messages Us</button>
+        </div>
+    </header>
+
+
+    <main class="main-content">
+        <div class="container">
+            <h1>Our Company</h1>
+
+            <div class="slider">
+                <div class="imgSquare">
+                    <img class="img-slideshow" src="https://source.unsplash.com/6xBvVSs2G8c/w=300" />
+                </div>
+                <div class="imgSquare">
+                    <img class="img-slideshow" src="https://source.unsplash.com/jy4t6SY9Ax0/w=300" />
+                </div>
+                <div class="imgSquare">
+                    <img class="img-slideshow" src="https://source.unsplash.com/1SL5Rj0xzsU/w=300" />
+                </div>
+                <!-- 
+                <button onclick="plusDivs(-1)">Previous</button>
+                <button onclick="plusDivs(1)">Next</button> -->
+
+            </div>
+
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                    showDivs((slideIndex += n));
+                }
+
+                function showDivs(n) {
+                    var i;
+                    var imglist = document.getElementsByClassName("img-slideshow");
+                    if (n > imglist.length) slideIndex = 1;
+                    else if (n < 1) slideIndex = imglist.length;
+                    for (i = 0; i < imglist.length; i++) {
+                        imglist[i].style.display = "none";
+                    }
+                    imglist[slideIndex - 1].style.display = "block";
+                }
+                setInterval(() => {
+                    plusDivs(1);
+                }, 5000)
+            </script>
+
+            <div class="history">
+                <p>
+                    Our story begins in 1971 along the cobblestone streets of Seattle’s historic Pike Place Market. It was here where Starbucks opened its first store, offering fresh-roasted coffee beans, tea and spices from around the world for our customers to take home.
+                    Our name was inspired by the classic tale, “Moby-Dick,” evoking the seafaring tradition of the early coffee traders.
+                </p>
+                <p>
+                    Ten years later, a young New Yorker named Howard Schultz would walk through these doors and become captivated with Starbucks coffee from his first sip. After joining the company in 1982, a different cobblestone road would lead him to another discovery.
+                    It was on a trip to Milan in 1983 that Howard first experienced Italy’s coffeehouses, and he returned to Seattle inspired to bring the warmth and artistry of its coffee culture to Starbucks. By 1987, we swapped our brown aprons for
+                    green ones and embarked on our next chapter as a coffeehouse.
+                </p>
+                <p>
+                    Starbucks would soon expand to Chicago and Vancouver, Canada and then on to California, Washington, D.C. and New York. By 1996, we would cross the Pacific to open our first store in Japan, followed by Europe in 1998 and China in 1999. Over the next two
+                    decades, we would grow to welcome millions of customers each week and become a part of the fabric of tens of thousands of neighborhoods all around the world. In everything we do, we are always dedicated to Our Mission: to inspire and
+                    nurture the human spirit – one person, one cup, and one neighborhood at a time.
+                </p>
+            </div>
+        </div>
+
+
+    </main>
+    <div class="content">
+        <div class="transform-content">
+            <h2>Transform your brand</h2>
+            <p>
+                We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.
+            </p>
+            <a href="" class="link">Learn more</a>
+
+        </div>
+        <div class="transform-img">
+            <!-- <img src="css/images/desktop/image-transform.jpg" alt="transform"> -->
+        </div>
+        <div class="standout-img">
+            <!-- <img src="css/images/desktop/image-stand-out.jpg" alt="standout"> -->
+
+        </div>
+        <div class="standout-content">
+            <h2>Stand out to the right audience</h2>
+            <p>
+                Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+            </p>
+            <a href="" class="link">Learn more</a>
+        </div>
+        <div class="graphic-content">
+            <!-- <img src="css/images/mobile/image-stand-out.jpg" alt="standout"> -->
+            <h2>Graphic Design</h2>
+            <p>
+                Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+            </p>
+        </div>
+        <div class="photography-content">
+            <h2>Photography</h2>
+            <p>
+                Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+            </p>
+
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
